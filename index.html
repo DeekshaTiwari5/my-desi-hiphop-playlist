@@ -11,7 +11,14 @@
   <link rel="stylesheet" href="style.css">
   <script>
     // set before paint or it flashes
-    document.documentElement.style.setProperty("--hero-bg", "url('assets/hero-photo.jpg')");
+    // document.documentElement.style.setProperty("--hero-bg", "url('assets/hero-photo.jpg')");
+  const isMobile = window.innerWidth <= 768;
+
+  document.documentElement.style.setProperty(
+    "--hero-bg",
+    `url('${isMobile ? "assets/hero-mobile.png" : "assets/hero-photo.jpg"}')`
+  );
+
   </script>
 </head>
 <body>
