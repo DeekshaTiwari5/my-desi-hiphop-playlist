@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desi Hip-Hop Radio — Desi Beats &amp; Raw Vibes</title>
+<meta name="description" content="A desi hip-hop radio experience featuring raw beats, powerful bars, street stories, and the sounds that shaped Desi Hip-Hop."><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // set before paint or it flashes
+    document.documentElement.style.setProperty("--hero-bg", "url('assets/hero-photo.jpg')");
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">🎧 <span>DESI HIPHOP</span></div> 
+    <nav class="site-nav">
+      <a href="#" id="navSongs">OG Songs</a>
+      <a href="#" id="navPlaylists">Playlists</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="eyebrow">OG Bollywood Songs</p>
+        <h1 class="hero-title">
+          देसी अंदाज़<br>हिप-हॉप आवाज़
+        </h1>
+       <p class="hero-sub">Desi Flow. Street Soul. Crazy Vibes.</p>
+       <p class="hero-desc">From the streets to the spotlight, feel the beats, bars, and stories that define Desi Hip-Hop.</p> <div class="status-row">
+          <div class="live-badge"><span class="dot"></span>LIVE • 24/7</div>
+          <div class="listeners-badge">
+            <span class="listeners-dot"></span>
+            <span id="listenersCount">—</span> listening now
+          </div>
+        </div>
+      </div>
+
+      <div class="chai-card">
+        <span class="chai-card-icon">🎸</span>
+        <div class="chai-card-text">
+          <strong>देसी बीट्स</strong>
+          <p>Made with love</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="player" id="player">
+    <div class="player-track">
+      <div class="artwork-wrap">
+        <img class="artwork" id="artwork" src="assets/background.svg" alt="">
+      </div>
+      <div class="track-info">
+        <p class="now-playing-label">
+          Now Playing
+          <span class="equalizer" id="equalizer"><i></i><i></i><i></i><i></i></span>
+        </p>
+        <p class="track-title" id="trackTitle">—</p>
+        <p class="track-meta"><span id="trackArtist">—</span> <span class="dotsep">•</span> <span id="trackYear">—</span></p>
+      </div>
+      <button class="icon-btn playlist-toggle" id="playlistToggle" aria-label="Open playlist">☰</button>
+    </div>
+
+    <div class="player-progress">
+      <span class="time" id="currentTime">00:00</span>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="time" id="durationTime">00:00</span>
+    </div>
+
+    <div class="player-controls">
+      <div class="transport">
+        <button class="icon-btn" id="prevBtn" aria-label="Previous song">⏮</button>
+        <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+        <button class="icon-btn" id="nextBtn" aria-label="Next song">⏭</button>
+      </div>
+      <div class="volume-control">
+        <button class="icon-btn" id="muteBtn" aria-label="Mute">🔊</button>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+      </div>
+    </div>
+  </div>
+
+  <div id="ytPlayer" class="yt-mount"></div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="playlist-panel" id="playlistPanel">
+    <div class="playlist-header">
+      <h2>Desi Hip-Hop Playlist</h2>
+      <button class="icon-btn" id="closePlaylist" aria-label="Close playlist">✕</button>
+    </div>
+    <ul class="playlist-list" id="playlistList"></ul>
+  </aside>
+
+  <footer class="site-footer" id="about">
+    <p class="footer-logo">🎧 Desi Hiphop</p>
+    <p class="footer-tagline">OG songs • Hiphop • Bollywood</p>
+    <p class="footer-note">Made for crazy evenings.</p>
+    <p class="footer-copy">© 2026 Desi Hiphop</p>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>

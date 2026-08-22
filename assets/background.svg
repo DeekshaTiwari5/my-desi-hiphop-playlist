@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6b16a"/>
+      <stop offset="35%" stop-color="#e07a4f"/>
+      <stop offset="65%" stop-color="#7a3a2e"/>
+      <stop offset="100%" stop-color="#241108"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe2ad" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#ffb066" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb066" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bulb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3d0" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffd27a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c0f09"/>
+      <stop offset="100%" stop-color="#0d0705"/>
+    </linearGradient>
+    <linearGradient id="silhouette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#170c07"/>
+      <stop offset="100%" stop-color="#0c0603"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1180" cy="430" r="420" fill="url(#sun)"/>
+
+  <!-- distant skyline / domes -->
+  <g fill="#2a160d" opacity="0.85">
+    <rect x="1200" y="470" width="40" height="160" />
+    <rect x="1250" y="440" width="30" height="190" />
+    <path d="M1290 470 a35 35 0 0 1 70 0 v160 h-70 z" />
+    <circle cx="1325" cy="440" r="10"/>
+    <rect x="1380" y="500" width="26" height="130" />
+    <rect x="1420" y="460" width="34" height="170" />
+    <rect x="1470" y="510" width="24" height="120" />
+    <rect x="1050" y="500" width="30" height="130" />
+    <rect x="1100" y="480" width="26" height="150" />
+  </g>
+
+  <!-- ground / road -->
+  <rect x="0" y="630" width="1600" height="270" fill="url(#ground)"/>
+  <rect x="0" y="630" width="1600" height="6" fill="#3a2013" opacity="0.5"/>
+
+  <!-- big tree, upper left -->
+  <g fill="url(#silhouette)">
+    <ellipse cx="230" cy="230" rx="330" ry="230"/>
+    <path d="M180 380 q10 120 -20 260 l30 4 q30 -140 20 -258 z"/>
+    <path d="M260 390 q30 130 10 250 l28 -4 q10 -130 -20 -252 z"/>
+  </g>
+
+  <!-- chai stall structure -->
+  <g>
+    <!-- back wall -->
+    <rect x="330" y="260" width="430" height="380" fill="#4a2417" opacity="0.9"/>
+    <rect x="330" y="260" width="430" height="380" fill="url(#silhouette)" opacity="0.35"/>
+    <!-- roof -->
+    <polygon points="300,275 800,255 830,300 280,320" fill="#120a06"/>
+    <!-- counter -->
+    <rect x="300" y="560" width="480" height="90" fill="#17120d"/>
+    <rect x="300" y="560" width="480" height="10" fill="#2c1a10"/>
+    <!-- jars -->
+    <g fill="#5a3a20" opacity="0.9">
+      <rect x="620" y="500" width="34" height="56" rx="6"/>
+      <rect x="665" y="495" width="34" height="61" rx="6"/>
+      <rect x="710" y="505" width="30" height="51" rx="6"/>
+    </g>
+    <!-- kettle -->
+    <g fill="#0e0906">
+      <ellipse cx="470" cy="540" rx="30" ry="20"/>
+      <rect x="445" y="510" width="50" height="35" rx="10"/>
+      <path d="M495 520 q30 -6 34 14" stroke="#0e0906" stroke-width="6" fill="none"/>
+    </g>
+    <!-- steam -->
+    <g stroke="#ffe9c7" stroke-width="4" fill="none" opacity="0.45" stroke-linecap="round">
+      <path d="M480 505 q-10 -25 5 -45 q15 -20 2 -45"/>
+      <path d="M505 500 q10 -22 -3 -42 q-13 -20 0 -44"/>
+    </g>
+  </g>
+
+  <!-- hanging bulb -->
+  <circle cx="610" cy="350" r="70" fill="url(#bulb)"/>
+  <line x1="610" y1="255" x2="610" y2="320" stroke="#120a06" stroke-width="3"/>
+  <circle cx="610" cy="332" r="12" fill="#ffe9b8"/>
+
+  <!-- bicycle silhouette, right of stall -->
+  <g stroke="#0c0603" stroke-width="6" fill="none" stroke-linecap="round">
+    <circle cx="1010" cy="650" r="60" />
+    <circle cx="1180" cy="650" r="60" />
+    <path d="M1010 650 L1090 560 L1180 650"/>
+    <path d="M1090 560 L1060 650"/>
+    <path d="M1090 560 L1120 500"/>
+    <path d="M1015 500 L1150 500"/>
+    <line x1="1015" y1="500" x2="1010" y2="650"/>
+  </g>
+
+  <!-- foreground road texture -->
+  <g fill="#0a0503" opacity="0.4">
+    <ellipse cx="500" cy="820" rx="600" ry="40"/>
+    <ellipse cx="1200" cy="850" rx="500" ry="35"/>
+  </g>
+</svg>
